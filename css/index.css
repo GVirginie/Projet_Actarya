@@ -1,0 +1,300 @@
+/* 
+--GENERAL
+--HEADER
+-----OPTION
+-----COMPTE
+--NAVIGATION
+--MAIN
+----ACCUEIL
+----PRESENTATION
+----BOUTIQUE
+--FOOTER
+
+*/
+
+    /* -- GENERAL -- */
+
+:root {
+    --couleur_primaire : #000000;
+    --couleur_secondaire: white;
+}
+
+body {
+    background: linear-gradient(#79A0D2, #7F98B8);
+}
+
+a {
+    color: var(--couleur_primaire);
+}
+
+svg {
+    height: 25px;
+    width: 25px;
+}
+
+    /* -- HEADER -- */
+
+.logo {
+    max-width: 250px;
+}
+
+    /* Header haut */
+
+.header_haut {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+    /* Header options */
+
+.header_options {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.button_themes {
+    border: 2px solid black;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: var(--couleur_primaire);
+    color: var(--couleur_secondaire);
+}
+.button_langues {
+    border: 2px solid black;
+    padding: 8px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #002395, #FFF, #ED2939);
+}
+    /* Header compte */
+
+.header_compte {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.button_inscription {
+    border: 2px solid black;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.button_connexion {
+    border: 2px solid black;
+    padding: 8px;
+    border-radius: 10px;
+
+}
+    /* Header bas */
+
+.header_bas {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.note {
+    text-align: center;
+
+}
+    /* -- NAVIGATION -- */
+
+.lien_nav {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+    /* -- MAIN -- */
+
+    /* ACCUEIL */
+
+.accueil_jeu {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+.accueil_picture {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.accueil_img img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border: 3px solid black;
+}
+
+.accueil_txt {
+    position: absolute;
+    top: 75px;
+    left: 75px;
+    font-size: 1.2rem;
+}
+
+.button_telechargement {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.button_telechargement a {
+    text-decoration: none;
+}
+
+
+    /* PRESENTATION */
+.presentation img {
+    border: 3px solid black;
+    height: 300px;
+    object-fit: cover;
+}
+    /* Actarya */
+
+.pres_actarya {
+    text-align: center;
+    margin: 2rem;
+    gap: 1.5rem;
+
+}
+
+    /* Cartes */
+
+.pres_cartes {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.pres_cartes_txt {
+    text-align: center;
+    flex: 1 1 205px;
+}
+
+.pres_picture {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pres_picture img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 3px solid black;
+}
+
+    /* Faction */
+
+.pres_faction {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    align-content: center;
+}
+
+.pres_faction_txt {
+    text-align: center;
+    flex: 1 1 246px;
+}
+
+.img_faction {
+    align-self: center;
+}
+    /* A venir */
+
+.pres_avenir {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.pres_avenir h2 {
+    text-align: center;
+}
+
+.pres_avenir ul {
+    align-self: center;
+}
+
+.parti2 {
+    color: var(--couleur_secondaire);
+}
+    /* BOUTIQUE */
+
+.boutique {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.boutique a {
+    color: var(--couleur_secondaire);
+}
+
+.boutique_txt {
+    text-align: center;
+}
+
+.boutique_produits {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.produits1, .produits2, .produits3 {
+    padding: 20px;
+}
+
+    /* FOOTER */
+
+.footer_haut {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.button_new_email, .button_new_envoyer {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.footer_reseaux {
+    display: flex;
+    gap: 1.5rem;
+}
