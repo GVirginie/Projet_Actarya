@@ -16,15 +16,9 @@
 
 :root {
     --couleur_primaire : #000000;
+    --couleur_fond_fonce : #242424;
     --couleur_secondaire: white;
-}
-
-body {
-    background: linear-gradient(#79A0D2, #7F98B8);
-}
-
-a {
-    color: var(--couleur_primaire);
+    --couleur_second_clair : #eeeeee;
 }
 
 svg {
@@ -45,7 +39,7 @@ svg {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    gap: 2rem;
+
 }
 
     /* Header options */
@@ -59,28 +53,26 @@ svg {
     gap: 2rem;
 }
 
-.button_themes {
-    border: 2px solid black;
-    padding: 8px;
-    border-radius: 10px;
-    background-color: var(--couleur_primaire);
-    color: var(--couleur_secondaire);
-}
+
+
+
+
+/*
 .button_langues {
     border: 2px solid black;
     padding: 8px;
     border-radius: 10px;
     background: linear-gradient(to right, #002395, #FFF, #ED2939);
-}
+}*/
     /* Header compte */
 
 .header_compte {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    margin: 0 2rem 0 0;
 }
 .button_inscription {
     border: 2px solid black;
@@ -108,11 +100,17 @@ svg {
 }
     /* -- NAVIGATION -- */
 
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
 .lien_nav {
+    padding-left: 0;
     text-align: center;
     display: flex;
     justify-content: space-around;
-    gap: 2rem;
+
 }
 
 nav li {
@@ -123,14 +121,18 @@ nav a {
     text-decoration: none;
 }
 
+.button_ferme_menu {
+    display: none;
+}
     /* -- MAIN -- */
 
     /* ACCUEIL */
 
 .accueil_jeu {
-    max-width: 1200px;
-    margin: auto;
+
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .accueil_picture {
@@ -143,19 +145,25 @@ nav a {
     width: 100%;
     height: 500px;
     object-fit: cover;
-    border: 3px solid black;
+    border: 3px solid black;  
+}
+
+.accueil_img {
+position: relative;
 }
 
 .accueil_txt {
     position: absolute;
-    top: 75px;
-    left: 75px;
     font-size: 1.2rem;
+    top: 25px;
+    left: 50px;
+    width: 50%;     
+    text-align: center;
+
 }
 
 .button_telechargement {
-    background-color: white;
-    border: 1px solid black;
+ 
     border-radius: 10px;
     padding: 5px;
 }
@@ -246,9 +254,7 @@ nav a {
     align-self: center;
 }
 
-.parti2 {
-    color: var(--couleur_secondaire);
-}
+
     /* BOUTIQUE */
 
 .boutique {
@@ -257,9 +263,7 @@ nav a {
     flex-direction: column;
 }
 
-.boutique a {
-    color: var(--couleur_secondaire);
-}
+
 
 .boutique_txt {
     text-align: center;
@@ -296,5 +300,88 @@ nav a {
 
 .footer_reseaux {
     display: flex;
+
     gap: 1.5rem;
 }
+
+
+.icon-social {
+    display: flex;
+    align-self: center;
+}
+
+        /* MEDIA QUERIES */
+
+@media (max-width: 1200px)  {
+    .img_perso {
+        display: none;
+    }
+
+    .accueil_jeu {
+        display: flex;        
+    }
+
+    .img_jeu {
+        align-content: center;
+    }
+    .accueil_txt {
+        position: absolute;
+        font-size: 1.2rem;
+        top: 25px;
+        left: 50px;
+        width: 50%;
+        text-align: center;
+
+    }
+}
+
+
+@media (max-width: 600px) {
+.header_haut {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+
+
+    .menu-icon {
+    display: flex;
+    justify-content: start;
+    margin: 1rem 0 1rem 2rem;
+
+    }
+
+    .lien_nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0; 
+    overflow-x: hidden;
+    transition: 0.5s;
+    flex-direction: column;
+    justify-content: start;
+    gap: 3rem;
+
+
+
+    }
+    .button_ferme_menu {
+        display: flex;
+        justify-content: flex-end;
+        margin: 20px 20px 0 0;
+        cursor: pointer;
+    }
+
+
+
+    .lien_nav.active {
+        width: 200px;
+
+    }
+
+}
+
+

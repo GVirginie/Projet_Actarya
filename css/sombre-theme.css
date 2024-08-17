@@ -1,0 +1,55 @@
+/* 
+--GENERAL
+--HEADER
+-----OPTION
+-----COMPTE
+--NAVIGATION
+--MAIN
+----ACCUEIL
+----PRESENTATION
+----BOUTIQUE
+--FOOTER
+
+*/
+
+/* -- GENERAL -- */
+
+:root {
+    --couleur_primaire: #000000;
+    --couleur_fond_fonce: #242424;
+    --couleur_secondaire: white;
+    --couleur_second_clair: #eeeeee;
+}
+
+
+
+body {
+    background-color: var(--couleur_fond_fonce);
+    color: var(--couleur_secondaire);
+}
+
+
+
+#button_theme {
+    background-color: var(--couleur_fond_fonce);
+    border: 0px;
+}
+
+a {
+    color: var(--couleur_secondaire);
+}
+
+.button_telechargement {
+    color: var(--couleur_primaire);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+@media (max-width: 600px) {
+
+
+    .lien_nav {
+        background-color: var(--couleur_fond_fonce);
+
+    }
+         }
